@@ -82,7 +82,7 @@ public class DampingRotateAnimation extends Animation {
         float cycles = realElapsedTime * 1.0f / getDuration();
         float amp = (mToDegrees - mFromDegrees) / 2.0f;
         float mid = mFromDegrees + amp;
-        float damp = animationStartTime == -1 ? 1 : (float) Math.pow(dampingRatio, cycles);
+        float damp = animationStartTime == -1 || dampingRatio == 1 ? 1 : (float) Math.pow(dampingRatio, cycles);
         float degrees = mid + amp * damp * interpolatedTime;
 
         if (DEBUG) {

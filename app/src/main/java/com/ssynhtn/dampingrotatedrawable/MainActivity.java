@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final DampingRotateAnimation rotate = new DampingRotateAnimation(-30, 30, 100, 0.8f);
+        final DampingRotateAnimation rotate = new DampingRotateAnimation(-30, 30, 200, 0.8f);
         findViewById(R.id.shaker).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
